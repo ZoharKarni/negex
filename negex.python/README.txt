@@ -13,7 +13,12 @@ This folder includes 5 files.
 5)	README: This file.
 
 The output will be called output.csv and will automatically saved in the folder. It will have the following structure:
-Sentence, Sentence.with.tags, Decision
+Sentence, Sentence.with.tags, Decision.
+
+This code can be run from the Command Prompt (CMD), by writing:
+> cd FOLDER_LOCATION
+> python negex.py negex_triggers.csv annotation.csv phrases.csv
+
 
 The code was written in Python 3.10.
 
