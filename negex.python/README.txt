@@ -1,6 +1,3 @@
-forked from chapmanbe/negex.
-negex.py -- A python module to implement Wendy Chapman's NegEx algorithm.
-
 This folder includes 5 files.
 1) 	negex.py: Python implementation of NegEx.
 	It can tag definitive negations only or both definitive and possible negations.
