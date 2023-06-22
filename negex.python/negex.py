@@ -288,16 +288,9 @@ negex = args.negex_triggers
 sentences = args.sentences
 phrases = args.phrases
 
-# negex = 'negex_triggers.csv' # update if needed
-# sentences = 'Annotations-1-120.csv' # update if needed
-# phrases = 'phrases.csv' # update if needed
-
-# def main():
 convert_csv_to_txt(negex, 'negex_triggers.txt', '\t')  # \t\t
-# convert_csv_to_txt(sentences, 'annotation.txt', '\t')
 rfile = open(r'negex_triggers.txt')
 irules = sortRules(rfile.readlines())
-# reports = csv.reader(open(r'annotation.txt'), delimiter='\t')
 reports = csv.reader(open(sentences))
 next(reports, None)  # skip the headers
 reportNum = 0
@@ -317,7 +310,6 @@ list_of_phrases = [cell for row in data for cell in row]
 ###
 
 for report in reports:
-    # rphrases = report[1].split(',') # not relevent if we use the section above (and ignore the "Concept" column)
     rphrases = list_of_phrases
     tagger = negTagger(sentence=report[0], phrases=rphrases, rules=irules, negP=False)
     report.append(tagger.getNegTaggedSentence())
@@ -333,7 +325,7 @@ ofile.close()
 """# Additional code to export .csv file with relevant columns
 
 The file will have the following structure:
-Number, Phrases, Sentence, Ground truth, Prediction
+Sentence, Sentence.with.tags, Prediction
 """
 
 selected_columns = [0, 2]  # update if needed
@@ -348,5 +340,3 @@ open(r'negex_output.csv', 'r').close()
 os.remove('negex_output.csv')
 rfile.close()
 os.remove('negex_triggers.txt')
-
-
