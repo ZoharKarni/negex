@@ -1,7 +1,5 @@
 forked from chapmanbe/negex.
 negex.py -- A python module to implement Wendy Chapman's NegEx algorithm.
-The original NegEx algorithm is published at:
-http://www.dbmi.pitt.edu/chapman/NegEx.html
 
 This folder includes 5 files.
 1) 	negex.py: Python implementation of NegEx.
