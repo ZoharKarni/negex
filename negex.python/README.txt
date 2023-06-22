@@ -19,7 +19,6 @@ This code can be run from the Command Prompt (CMD), by writing:
 > cd FOLDER_LOCATION
 > python negex.py negex_triggers.csv annotation.csv phrases.csv
 
-
 The code was written in Python 3.10.
 
 Tags are:    [PREN] - Prenegation rule tag
